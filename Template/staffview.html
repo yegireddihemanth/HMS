@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: 333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>AdminHome</title>
+
+
+
+    <li><a class="active" href="customers">Customers</a></li>
+    <li><a class="active" href="rooms">Rooms</a></li>
+
+    <li><a class="active" href="terminate">Terminate</a></li>
+
+    <li><a class="active" href="contactus">Contact Us</a></li>
+    <li><a class="active" href="addstaff">Add Staff</a></li>
+</head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+       <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: coral;}
+
+tr:hover {background-color: coral;}
+</style>
+</style>
+
+<style>
+    <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: coral;}
+
+tr:hover {background-color: coral;}
+</style>
+</style>
+
+<style>
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+</style>
+<div style="padding-left:400px;padding-top:100px;">
+<table >
+
+<tr><td>Id</td><td>Name</td><td>Designation</td><td>Salary</td><td>Contact</td><td>Address</td><td>Email</td></tr>
+    {% for item in d %}
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td>
+    <td>{{item[3]}}</td>
+    <td>{{item[4]}}</td>
+    <td>{{item[5]}}</td>
+    <td>{{item[6]}}</td>
+    <td>
+<form method="post" action="updatestaff">
+    <input type="hidden" name="sid" value="{{item[0]}}">
+    <input type="submit" value="update">
+</form>
+
+<form method="post" action="terminate">
+    <input type="hidden" name="sid" value="{{item[0]}}">
+    <input type="submit" value="delete">
+</form>
+    </td>
+</tr>
+{% endfor %}
+
+    </table>
+    </div>
+</body>
+</html>

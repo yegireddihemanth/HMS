@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+
+  padding: 20px 102px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: coral;}
+
+tr:hover {background-color: coral;}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>rooms</title>
+
+
+
+
+    <li><a class="active" href="addroom">Add Room</a></li>
+<li><a class="active" href="rooms">Rooms</a></li>
+<!--<li><a class="active" href="food">Food</a></li>-->
+
+
+    <br><br><br><br><br><br><br><br>
+</head>
+<body>
+<center>
+
+<!--<div style="padding-left:400px;padding-top:100px;">-->
+
+<table border="2">
+<td>Room No.</td><td>Room Type</td><td>Strength</td><td>Warden</td><td>Cost</td></tr>
+
+{% for item in d %}
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td>
+    <td>{{item[3]}}</td>
+    <td>{{item[4]}}</td>
+    <td>{{item[5]}}</td>
+    <td>
+<form method="post" action="updateroom">
+
+<input type="hidden" name="rid" value="{{item[0]}}">
+<input type="submit" value="update">
+</form>
+</td>
+
+</tr>
+{% endfor %}
+
+    </table>
+</center>
+</body>
+</html>

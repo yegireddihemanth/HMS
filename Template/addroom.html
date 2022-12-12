@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+</style>
+ <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: coral;}
+
+tr:hover {background-color: coral;}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>add room</title>
+</head>
+<body>
+
+<div style="padding-left:400px;padding-top:100px;">
+<table>
+<form method="post" action="addroomdb">
+<tr><td>Room No. </td><td><input type="text" name="t1"></td></tr>
+<tr><td>Room Type</td><td><input type="text" name="t2" ></td></tr>
+<tr><td>Strength</td><td><input type="text" name="t3" ></td></tr>
+<tr><td>Warden</td><td><input type="text" name="t4" ></td></tr>
+<tr><td>Cost</td><td><input type="text" name="t5" ></td></tr>
+
+<tr><td><input type="submit" value="update"></td><td><input type="reset" value="Clear"></td></tr>
+</form>
+</table>
+</div>
+
+
+</body>
+</html>

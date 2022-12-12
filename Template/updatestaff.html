@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>update staff</title>
+</head>
+<body>
+
+<div style="padding-left:400px;padding-top:100px;">
+<table>
+<form method="post" action="updatestaffdb">
+<tr><td>ID</td><td><input type="text" name="t1" value="{{d[0][0]}}"></td></tr>
+<tr><td>name</td><td><input type="text" name="t2" value="{{d[0][1]}}"></td></tr>
+<tr><td>designation</td><td><input type="text" name="t3" value="{{d[0][2]}}"></td></tr>
+<tr><td>Salary</td><td><input type="text" name="t4" value="{{d[0][3]}}"></td></tr>
+<tr><td>Contact</td><td><input type="text" name="t5"  value="{{d[0][4]}}"></td></tr>
+ <tr><td>Address</td><td><input type="text" name="t6"  value="{{d[0][5]}}"></td></tr>
+<tr><td><input type="submit" value="update"></td><td><input type="reset" value="Clear"></td></tr>
+</form>
+</table>
+</div>
+
+
+</body>
+</html>
