@@ -1,4 +1,4 @@
-!pip install flask
+sudo pip install flask
 import random
 
 from flask import Flask, render_template, request, session
